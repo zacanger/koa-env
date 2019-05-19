@@ -16,7 +16,7 @@ const app = new Koa()
 
 app.use(koaEnv('/env-route'))
 
-app.listen(8080
+app.listen(8080)
 ```
 
 ```
