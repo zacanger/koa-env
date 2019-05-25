@@ -11,6 +11,9 @@ tape.test('get all', (t) => {
   request(server)
     .get('/env')
     .expect(200, (err, res) => {
+      if (err) {
+        throw err
+      }
       t.equal(typeof res, 'object', 'res is an object')
       t.end()
     })
@@ -24,6 +27,9 @@ tape.test('get one', (t) => {
   request(server)
     .get('/env/__KOA_ENV_TESTING')
     .expect(200, (err, res) => {
+      if (err) {
+        throw err
+      }
       t.equal(res.body, 'koa-env-testing', 'get one key')
       t.end()
     })
