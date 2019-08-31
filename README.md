@@ -25,6 +25,4 @@ GET /env-route // => process.env
 POST /env-route -d '{"foo": "bar"}' // => process.env.foo = bar
 ```
 
-## License
-
-[MIT](./LICENSE.md)
+[LICENSE](./LICENSE.md)
